@@ -14,13 +14,18 @@ public class Employee {
         this.salary = salary;
     }
 
+    public Employee(String position, String name, double salary, double bonus) {
+        this.position = position;
+        this.name = name;
+        this.salary = salary;
+        this.bonus = bonus;
+    }
+
     public void showInfo() {
-        System.out.println("Name: " + name);
-        System.out.println("Position: " + position);
-        System.out.println("Salary: " + salary);
+        System.out.println("Name: " + name + "\nPosition: " + position + "\nSalary: " + hasBonus(bonus));
     }
 
     public double hasBonus(double bonus) {
-        return  this.salary = bonus * salary;
+        return this.salary = bonus * salary;
     }
 }

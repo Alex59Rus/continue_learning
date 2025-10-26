@@ -1,15 +1,18 @@
 package org.example.oop;
 
+import static org.example.HelperClass.print;
+
 public class Box {
     public double length;
     public double width;
     public double height;
 
     public void showVolumeArray(double[] a) {
-        System.out.println(getVolume());
+        print(getVolume());
     }
+
     public void showVolume(double length, double width, double height) {
-        System.out.println(getVolume());
+        print(getVolume());
     }
 
     public double getVolume() {
@@ -28,13 +31,57 @@ public class Box {
         this.width = width;
         this.height = height;
     }
+
     public Box() {
-        this.length = 1;
-        this.height = 1;
-        this.width = 1;
+        this(10);
+    }
+
+    public Box(double size) {
+        this(size, size, size);
     }
 
     public void showVolume() {
-        System.out.println(getVolume());
+        print(getVolume());
+    }
+
+    /*    public void compare(Box anotherBox) {
+            double currentVolume = getVolume();
+            double anotherVolume = anotherBox.getVolume();
+            if (currentVolume > anotherVolume) {
+                System.out.println("Текущая коробка больше");
+            } else if (currentVolume < anotherVolume) {
+                System.out.println("Текущая коробка меньше");
+            }else {
+                System.out.println("Они равны");
+            }
+        }*/
+    public int compare(Box box) {
+        double currentVolume = getVolume();
+        double anotherVolume = box.getVolume();
+        if (currentVolume > anotherVolume) {
+            return 1;
+        } else if (currentVolume < anotherVolume) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
+
+    public Box(Box box) {
+        this(box.length, box.width, box.height);
+    }
+
+    public Box copy() {
+        return new Box(this.length, this.width, this.height);
+    }
+
+    public Box increase(Box box, int countMultuply) {
+        return new Box(this.length * countMultuply, this.width * countMultuply, this.height * countMultuply);
+    }
+
+    public void showLengthSides() {
+        print("LENGTH = " + this.length);
+        print("WIDTH = " + this.width);
+        print("HEIGHT = " + this.height);
     }
 }

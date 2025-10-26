@@ -1,4 +1,4 @@
-package org.example;
+package org.example.foreach;
 
 public class forEach {
     static int[] numbers = {1, 2, 3, 4, 5, 6, 3, 3, 3};

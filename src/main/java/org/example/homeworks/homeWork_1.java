@@ -1,4 +1,4 @@
-package org.example.oop;
+package org.example.homeworks;
 
 public class homeWork_1 {
     public static class Human {
