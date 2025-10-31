@@ -1,0 +1,135 @@
+
+import java.util.ArrayList;
+import java.util.HashSet;
+
+import static org.example.HelperClass.print;
+
+ArrayList<String> employees = new ArrayList<>();
+fillCollection();
+        employees.add("Bob");
+        employees.add(null);
+        employees.add("Set");
+        employees.add("Boba");
+        employees.add("Boba");
+        employees.add("Boba");
+print(employees);
+//print(employees.size());
+HashSet<String> employessUniq = new HashSet<>(employees);
+        System.out.println(employessUniq);
+
+ArrayList<Integer> numbers = new ArrayList<>();
+        for (int i = 1; i < 6; i++) {
+        numbers.add(i);
+    }
+            numbers.addLast(null);
+countNames(employees,numbers);
+static ArrayList<String> employees = getEmployees();
+public static void fillCollection() {
+    employees.add("Bob");
+    employees.add("Boba");
+    print(employees);
+    print(employees.size());
+
+    ArrayList<Integer> numbers = new ArrayList<>();
+    for (int i = 1; i < 6; i++) {
+        numbers.add(i);
+    }
+    print(numbers);
+
+}
+
+import org.example.oop.Box;
+
+Box box = new Box(10);
+Box box2 = box.increase(box, 4);
+
+        box.showLengthSides();
+        box2.showLengthSides();
+print(box.getVolume());
+print(box2.getVolume());
+
+Box box = new Box();
+        box.setDimensions(5,5,3);
+        System.out.println("getVolume box " + box.getVolume());
+Box box1 = new Box();
+        box1.setDimensions(5,5,4);
+        System.out.println("getVolume box1 " + box1.getVolume());
+        box.compare(box1);
+        System.out.println(box.compare(box1));
+
+Box box2 = new Box(30,30,30);
+Box box3 = new Box(box2);
+        System.out.println("getVolume box2 " + box2.getVolume());
+        System.out.println("getVolume box3 " + box3.getVolume());
+
+Box box4 = box3.copy();
+        System.out.println("getVolume box4 " + box4.getVolume());
+HomeWorkMonster frank = new HomeWorkMonster();
+HomeWorkMonster frank1 = new HomeWorkMonster();
+HomeWorkMonster frank2 = new HomeWorkMonster();
+        frank.voice(4);
+        frank1.voice(5,"adasdasd");
+        frank2.voice();
+
+
+import org.example.oop.Box;System.out.println(Math.sqrt(36));
+        System.out.println(Math.min(13,44));
+
+Box box = new Box(10.0);
+        box.showVolume();
+
+
+import org.example.oop.Employee;
+
+Employee employee = new Employee("Alex","Dev",120000,1.3);
+        employee.showInfo();
+
+        Box box = new Box(2,3,10);
+ Box box1 = new Box();
+ box.showVolume();
+ box1.showVolume();
+        double bonus = 1.2;
+        double penalty = 0.8;
+        Employee worker1 = new Employee("John","Dev",120000);
+        worker1.showInfo();
+        worker1.hasBonus(bonus);
+        worker1.showInfo();
+        worker1.hasBonus(penalty);
+        worker1.showInfo();
+
+
+
+
+        Box box = new Box();
+        double[] a = box.setDimensions(13,23,4);
+        box.showVolume(a);
+        Rectangle rectangle1 = new Rectangle();
+        double[] sides = rectangle1.setDimensionsArray(4,3);
+        System.out.println("showarea");
+        rectangle1.showArea(sides);
+        rectangle1.setDimension(1,3);
+        System.out.println("showareaelse");
+        rectangle1.showAreaElse();
+
+showSquare(123);
+      Dog fill = new Dog();
+        fill.name = "fill";
+        fill.breed = "poodle";
+        fill.weight = 12.2;
+        fill.showInfo();
+        fill.run(13);
+
+        Box box = new Box();
+        box.length = 10;
+        box.width = 10;
+        box.height = 10;
+        System.out.println("get");
+        box.getVolume();
+        System.out.println("show");
+        box.showVolume(box.height, box.width,box.height);
+
+printArray(0, 50, 10);
+printString(names);
+printInt(numbers);
+whichMonth();
+printOOP();

@@ -1,5 +1,7 @@
 package org.example.oop;
 
+import static org.example.HelperClass.print;
+
 public class Rectangle {
     double width;
     double height;
@@ -18,11 +20,11 @@ public class Rectangle {
 
     public void showArea(double[] lengthSides) {
         double square = width * height;
-        System.out.println(square);
+        print(square);
     }
 
     public double showAreaElse() {
-        System.out.println(this.height*this.width);
+        print(this.height*this.width);
         return this.width * this.height;
     }
 }

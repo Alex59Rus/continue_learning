@@ -1,5 +1,7 @@
 package org.example.oop;
 
+import static org.example.HelperClass.print;
+
 public class Dog {
     public String name;
     public String breed;
@@ -7,12 +9,12 @@ public class Dog {
     public int speed;
 
     public void showInfo() {
-        System.out.println("Name: " + name + "\nBreed: " + breed + "\nWeight: " + weight);
+        print("Name: " + name + "\nBreed: " + breed + "\nWeight: " + weight);
     }
 
     public void run(int speed) {
         for (int count = 1; count <= speed; count++) {
-            System.out.println("i'm run");
+            print("i'm run");
         }
     }
 }

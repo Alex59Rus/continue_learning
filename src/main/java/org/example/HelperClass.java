@@ -1,6 +1,7 @@
 package org.example;
 
-import org.example.oop.Box;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class HelperClass {
 
@@ -16,7 +17,10 @@ public class HelperClass {
     public static void print(String a) {
         System.out.println(a);
     }
-    public static void print(int[] a) {
-        System.out.println(a);
+    /*public static void print(ArrayList<String> a) {
+        System.out.println(Arrays.deepToString(a));
+    }*/
+    public static void print(String[] a) {
+        System.out.println(Arrays.deepToString(a));
     }
 }

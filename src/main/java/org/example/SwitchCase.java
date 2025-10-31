@@ -4,13 +4,14 @@ import java.util.Scanner;
 import java.util.Set;
 
 import static java.lang.Integer.parseInt;
+import static org.example.HelperClass.print;
 
 public class SwitchCase {
 
     public static void whichMonth() {
         Scanner input = new Scanner(System.in);
         while (true) {
-            System.out.println("\nВведите номер месяца от 1 до 12:");
+            print("\nВведите номер месяца от 1 до 12:");
             String userInput = input.nextLine().trim();
 
             try {
@@ -20,10 +21,10 @@ public class SwitchCase {
                     printMonth(month);
                     break;
                 } else {
-                    System.out.println("Число должно быть от 1 до 12!, а не " + userInput);
+                    print("Число должно быть от 1 до 12!, а не " + userInput);
                 }
             } catch (NumberFormatException e) {
-                System.out.println("Это не число! Введите от 1 до 12, а не " + userInput);
+                print("Это не число! Введите от 1 до 12, а не " + userInput);
             }
         }
         input.close();
@@ -31,18 +32,18 @@ public class SwitchCase {
 
     public static void printMonth(int month) {
         switch (month) {
-            case 1 -> System.out.println("January");
-            case 2 -> System.out.println("February");
-            case 3 -> System.out.println("March");
-            case 4 -> System.out.println("April");
-            case 5 -> System.out.println("May");
-            case 6 -> System.out.println("June");
-            case 7 -> System.out.println("July");
-            case 8 -> System.out.println("August");
-            case 9 -> System.out.println("September");
-            case 10 -> System.out.println("October");
-            case 11 -> System.out.println("November");
-            case 12 -> System.out.println("December");
+            case 1 -> print("January");
+            case 2 -> print("February");
+            case 3 -> print("March");
+            case 4 -> print("April");
+            case 5 -> print("May");
+            case 6 -> print("June");
+            case 7 -> print("July");
+            case 8 -> print("August");
+            case 9 -> print("September");
+            case 10 -> print("October");
+            case 11 -> print("November");
+            case 12 -> print("December");
         }
     }
 }

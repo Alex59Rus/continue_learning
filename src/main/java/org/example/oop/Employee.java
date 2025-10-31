@@ -1,5 +1,7 @@
 package org.example.oop;
 
+import static org.example.HelperClass.print;
+
 public class Employee {
 
     String name;
@@ -22,7 +24,7 @@ public class Employee {
     }
 
     public void showInfo() {
-        System.out.println("Name: " + name + "\nPosition: " + position + "\nSalary: " + hasBonus(bonus));
+        print("Name: " + name + "\nPosition: " + position + "\nSalary: " + hasBonus(bonus));
     }
 
     public double hasBonus(double bonus) {
