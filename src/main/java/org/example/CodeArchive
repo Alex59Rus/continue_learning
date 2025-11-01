@@ -1,3 +1,21 @@
+            Cat cat = new Cat();
+            Dog dog = new Dog();
+            Fish fish = new Fish();
+            Bird bird = new Bird();
+
+            ArrayList<AbleToRun> animals = new ArrayList<>();
+            animals.add(cat);
+            animals.add(dog);
+            animals.add(bird);
+            for (AbleToRun animal : animals) {
+                animal.run();
+            }
+            ArrayList<AbleToFly>  animalsFly = new ArrayList<>();
+            animalsFly.add(bird);
+            for (AbleToFly animal : animalsFly) {
+                animal.fly();
+            }
+
         Cat cat = new Cat();
         Lion lion = new Lion();
         CatFamily randomCat = new CatFamily(4,2,false);
