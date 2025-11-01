@@ -1,8 +1,7 @@
 package org.example.interfaces;
 
-public class Director implements Worker {
-    @Override
-    public void work() {
-        System.out.println("Director working");
+public class Director {
+    public void force(Worker worker) {
+        System.out.println("Again working");
     }
 }

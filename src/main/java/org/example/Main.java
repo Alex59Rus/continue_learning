@@ -1,27 +1,17 @@
 package org.example;
 
-import org.example.interfaces.*;
-
-import java.util.ArrayList;
+import org.example.interfaces.Client;
+import org.example.interfaces.Waiter;
 
 public class Main {
     public static void main(String[] args) {
-        Director director = new Director();
-        Programmer programmer = new Programmer();
-        Cook cook = new Cook();
+        Client client = new Client("soup");
 
-        ArrayList<Driver> drivers = new ArrayList<>();
-        drivers.add(programmer);
-        drivers.add(cook);
-        for (Driver driver : drivers) {
-            driver.drive();
-        }
-        ArrayList<Worker> workers = new ArrayList<>();
-        workers.add(programmer);
-        workers.add(cook);
-        workers.add(director);
-        for (Worker worker : workers) {
-            worker.work();
-        }
+        client.takeOrder(new Waiter() {
+            @Override
+            public void bringOrder(String wish) {
+                System.out.println("this " + wish);
+            }
+        }, client.wish);
     }
 }
