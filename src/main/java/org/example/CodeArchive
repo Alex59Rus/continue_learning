@@ -1,3 +1,14 @@
+        Cat cat = new Cat();
+        Lion lion = new Lion();
+        CatFamily randomCat = new CatFamily(4,2,false);
+        cat.eat();
+        lion.eat();
+        //print(middleAge(17,1,0,23,68,99));
+        //print(middleAge());
+        Box box = new Box();
+        WeightBox weightBox = new WeightBox(12.8);
+        box.showInfo();
+        weightBox.showInfo();
 
 import java.util.ArrayList;
 import java.util.HashSet;

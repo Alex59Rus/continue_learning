@@ -79,7 +79,7 @@ public class Box {
         return new Box(this.length * countMultuply, this.width * countMultuply, this.height * countMultuply);
     }
 
-    public void showLengthSides() {
+    public void showInfo() {
         print("LENGTH = " + this.length);
         print("WIDTH = " + this.width);
         print("HEIGHT = " + this.height);

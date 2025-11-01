@@ -1,4 +1,15 @@
 package org.example.inheritance;
 
-public class Lion {
+import static org.example.HelperClass.print;
+
+public class Lion extends CatFamily {
+    public Lion() {
+        super(4, 2, true);
+        food = "антилопа";
+    }
+
+    @Override
+    public void eat() {
+        super.eat();
+    }
 }
