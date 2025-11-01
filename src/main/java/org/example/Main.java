@@ -1,10 +1,8 @@
 package org.example;
 
-import org.example.inheritance.Cat;
-import org.example.inheritance.CatFamily;
-import org.example.inheritance.Lion;
-import org.example.oop.Box;
-import org.example.oop.WeightBox;
+import org.example.inheritance.Triangle;
+
+import static org.example.HelperClass.print;
 
 public class Main {
     public static void main(String[] args) {
