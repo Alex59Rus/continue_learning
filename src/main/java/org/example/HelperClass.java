@@ -1,26 +1,17 @@
 package org.example;
 
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 
 public class HelperClass {
 
-    public static void print(int a) {
-        System.out.println(a);
+    public static void print(Object o) {
+        System.out.println(o);
     }
-    public static void print(double a) {
-        System.out.println(a);
+    public static void print(Collection<?> c) {
+        System.out.println(c);
     }
-    public static void print(Object a) {
-        System.out.println(a);
-    }
-    public static void print(String a) {
-        System.out.println(a);
-    }
-    /*public static void print(ArrayList<String> a) {
-        System.out.println(Arrays.deepToString(a));
-    }*/
     public static void print(String[] a) {
-        System.out.println(Arrays.deepToString(a));
+        System.out.println(Arrays.toString(a));
     }
 }
