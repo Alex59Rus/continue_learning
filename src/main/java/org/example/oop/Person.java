@@ -18,14 +18,21 @@ public class Person {
             print("Неверный возраст");
         }
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public int getAge() {
         return age;
     }
+
     public String getName() {
         return name;
     }
 
+    @Override
+    public String toString() {
+        return String.format("Name: %s, Age: %d", name, age);
+    }
 }

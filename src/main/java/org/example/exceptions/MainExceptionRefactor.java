@@ -1,3 +1,4 @@
+/*
 package org.example.exceptions;
 
 import java.util.ArrayList;
@@ -26,7 +27,7 @@ public class Main {
             print("Выходим за пределы списка, тк ловим ошибку: " + e.getMessage());
         }
 
-        /*        int a = 0;
+                int a = 0;
 
         try {
             int b = 7 / 1;
@@ -39,6 +40,7 @@ public class Main {
             print("Возникла ошибка по причине: " + e.getMessage());
             print("Возникла ошибка в: " + e.getClass());
             print("Возникла ошибка с: " + e.getCause());
-        }*/
+        }
     }
 }
+*/

@@ -1,10 +1,8 @@
 package org.example;
 
-import org.example.interfaces.Client;
-import org.example.interfaces.Waiter;
-import org.example.interfaces.WaiterOne;
+import java.util.Scanner;
 
-import static org.example.HelperClass.print;
+import static org.example.HelperClass.*;
 
 public class Main {
     public static void main(String[] args) {
