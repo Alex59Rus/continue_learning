@@ -4,36 +4,44 @@ import static org.example.HelperClass.pause;
 import static org.example.HelperClass.print;
 
 public class Timer implements Runnable {
-    String timer = "00:00:00";
-
+    public static int secondsCount = 0;
     @Override
     public void run() {
-        for (int i = 0; i < 10_000_000; i++) {
-            print(i);
-            pause(1000);
-        }
     }
 
     public static void startTimer() {
-        int hours = 0;
-        int minutes = 0;
-        int seconds = 0;
+        int hours = 0, minutes = 0, seconds = 0;
 
-        while (hours < 1) {
-            for (int sec = 0; sec <= 60; sec++) {
-                //pause(1000);
-                print(hours+":"+minutes+":"+seconds);
-                seconds++;
-                if (seconds == 60) {
-                    seconds = 0;
-                    minutes++;
-                    if (minutes == 60) {
-                        minutes = 0;
-                        hours++;
-                    }
+        while (!Thread.currentThread().isInterrupted()) {
+            print(hours + ":" + minutes + ":" + seconds);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                print("Timer stopped");
+                Thread.currentThread().interrupt();
+                break;
+            }
+            secondsCount++;
+            seconds++;
+            if (seconds == 60) {
+                seconds = 0;
+                minutes++;
+                if (minutes == 60) {
+                    minutes = 0;
+                    hours++;
                 }
             }
         }
     }
-
+    public static int getSecondsCount() {
+        return secondsCount;
+    }
+    public static String secWord(int seconds) {
+        String word = "";
+        if (seconds == 1) {
+            return word = "секунду";
+        } else if (seconds >= 2 && seconds <= 4) {
+            return word = "секунды";
+        } return word = "секунд";
+    }
 }

@@ -45,7 +45,8 @@ public class HelperClass {
         try {
             Thread.sleep(millis);
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            print("Timer stopped");
+            Thread.currentThread().interrupt();
         }
     }
 }

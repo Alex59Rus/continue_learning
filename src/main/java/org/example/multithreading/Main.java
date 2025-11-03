@@ -7,7 +7,7 @@ import static org.example.multithreading.Timer.startTimer;
 public class Main {
     public static void main(String[] args) {
         //startTimer();
-        Thread thread = new Thread(new Timer());
+        /*Thread thread = new Thread(new Timer());
         thread.start();
 
         Thread thread1 = new Thread(() -> {
@@ -27,6 +27,6 @@ public class Main {
                 }
             }
         });
-        thread2.start();
+        thread2.start();*/
     }
 }
