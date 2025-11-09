@@ -19,6 +19,9 @@ public class HelperClass {
     public static void print(String[] a) {
         System.out.println(Arrays.toString(a));
     }
+    public static void print(int[] a) {
+        System.out.println(Arrays.toString(a));
+    }
 
     public static String inputStr() {
         return input.nextLine();
@@ -49,4 +52,5 @@ public class HelperClass {
             Thread.currentThread().interrupt();
         }
     }
+
 }

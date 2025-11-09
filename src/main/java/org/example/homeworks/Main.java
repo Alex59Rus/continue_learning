@@ -1,7 +1,9 @@
 package org.example.homeworks;
 
+import org.example.Car;
 import org.example.multithreading.Timer;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import static org.example.HelperClass.print;
