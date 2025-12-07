@@ -1,8 +1,9 @@
 package org.example;
 
+import org.example.arraylist.CarArrayList;
+import org.example.linkedlist.CarLinkedList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.*;
 
 import static org.example.HelperClass.print;
 import static org.junit.jupiter.api.Assertions.*;
@@ -32,7 +33,7 @@ public class CarListTest {
 
     @Test
     public void whenElementRemovedByNameThenSizeMustBeDecreased() {
-        Car car = new Car("Toyota",15);
+        Car car = new Car("Toyota", 15);
         carList.add(car);
         assertEquals(101, carList.size());
         assertTrue(carList.remove(car));
@@ -66,10 +67,11 @@ public class CarListTest {
     @Test
     public void insertIntoMiddleOfList() {
         Car car = new Car("BMW", 1);
-        carList.add(car,50);
+        carList.add(car, 50);
         Car carFromList = carList.get(50);
         assertEquals("BMW", carFromList.getBrand());
     }
+
     @Test
     public void insertIntoLastPosition() {
         Car car = new Car("BMW", 1);
@@ -77,11 +79,28 @@ public class CarListTest {
         Car carFromList = carList.get(100);
         assertEquals("BMW", carFromList.getBrand());
     }
+
     @Test
     public void insertIntoFirstPosition() {
         Car car = new Car("BMW", 1);
-        carList.add(car,0);
+        carList.add(car, 0);
         Car carFromList = carList.get(0);
         assertEquals("BMW", carFromList.getBrand());
+    }
+
+    @Test
+    public void getNonExistentElement() {
+        Car car = new Car("BMW", 1);
+        assertFalse(carList.contains(car));
+    }
+
+    @Test
+    public void containExistentElement() {
+        Car car = new Car("BMW", 1);
+        carList.add(car);
+        assertTrue(carList.add(car));
+        print(carList);
+        assertTrue(carList.contains(car));
+
     }
 }

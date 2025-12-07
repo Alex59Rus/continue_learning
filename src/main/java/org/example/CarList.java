@@ -1,12 +1,20 @@
 package org.example;
 
-public interface CarList {
+import org.example.oop.CarCollection;
 
-    void add(Car car);
-    void add(Car car, int index);
+public interface CarList extends CarCollection {
+
+    boolean add(Car car);
+
+    boolean add(Car car, int index);
+
     boolean remove(Car car);
+
     boolean removeAt(int index);
+
     void clear();
+
     int size();
+
     Car get(int index);
 }
